@@ -9,16 +9,21 @@ title = "Dark Mode: The Complete Guide"
 summary = "It's easy on the eyes and sometimes, even on your battery. So how do you turn off the lights?"
 +++
 
-Since the last design refresh of this site, dark interfaces began to appear in mainstream design trends. Maybe it's because a majority of my work once took place after nightfall, but I've always favored dark color palettes.
+Since the last design refresh of this site, dark interfaces began to appear in
+mainstream design trends.
 
-After noticing that design trends were finally shifting darker, I implemented
+Maybe it's because a majority of my work once took
+place after nightfall, but I've always favored dark color palettes. After
+noticing that design trends were finally shifting darker, I implemented
 user-selectable color schemes; a process I found unexpectedly difficult. I'm
-not alone in this observation: other design nerds have pointed it out too,
-most notably Chris Coyier, [who listed out requirements for dark mode
+not alone in this observation: other design nerds have pointed it out too, most
+notably Chris Coyier, [who listed out requirements for dark mode
 tutorials][dark-mode-requirements] on his influential web design blog, [CSS
 Tricks][css-tricks].
 
-Like many emerging ideas on the web, "dark mode" is complex because it exists at the intersection of several developing technologies.
+Like many emerging ideas on the web, "dark mode" is complex because it exists
+at the intersection of several developing technologies. Choosing the right
+tools to develop a solution can be difficult, even for seasoned engineers.
 
 ## What is "Dark Mode" Anyway?
 
