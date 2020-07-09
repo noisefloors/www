@@ -10,28 +10,35 @@ summary = "It's easy on the eyes and sometimes, even on your battery. So how do 
 +++
 
 Since the last design refresh of this site, dark interfaces began to [appear in
-mainstream design publications][designshack].
+mainstream design publications][designshack]. Maybe it's because a majority of
+my work once took place after nightfall, but I've always favored dark color
+palettes in UI design.
 
-Maybe it's because a majority of my work once took place after nightfall, but
-I've always favored dark color palettes. After noticing that design trends
-were finally shifting darker, I implemented user-selectable color schemes;
-a process I found unexpectedly difficult. I'm not alone in this observation:
-other design nerds have pointed it out too, most notably Chris Coyier, [who
-listed out requirements for dark mode tutorials][dark-mode-requirements] on
-his influential web design blog, [CSS Tricks][css-tricks]. There's a lot of incomplete knowledge on the subject.
+After noticing that trends were finally shifting darker, I implemented
+user-selectable color schemes on this site; a process I found unexpectedly
+difficult even after reading several blog entries on the topic. I'm not alone
+in this observation: other design nerds have pointed it out too, most notably
+Chris Coyier, [who listed out requirements for dark mode
+tutorials][dark-mode-requirements] on his influential web design blog, [CSS
+Tricks][css-tricks]. Much of the information you will find is valuable but
+incomplete.
 
-Like many emerging ideas on the web, "dark mode" can be complex because it
-exists at the intersection of several developing techniques. Even for
-seasoned engineers, choosing the right tools to develop a solution can be
-difficult.
+Like many emerging ideas on the web, implementing a dark color theme can be
+complex because it exists at the intersection of several developing
+technologies. Choosing the right tools to develop a solution is often
+difficult, even for seasoned engineers.
 
 ## What is "Dark Mode" Anyway?
 
-The central principle of "dark mode" is swapping the dark-on-light color
-palette that has become the norm in modern design for a light-on-dark version.
-This has several proported benefits, not the least of which is reducing eye
-strain. Software engineers have long used low-brightness themes for years to
-combat fatigue and restlessness after staring at a screen all day.
+What is becoming widely referred to as "dark mode" is swapping a bright,
+dark-on-light color scheme for a light-on-dark version. This simple change has
+several proported health benefits, not the least of which is reducing our
+exposure to blue-tinted light from the screens all around us, [which current
+research demonstrates may be interfering with sleep patterns][blue-tint].
+
+As you might expect, this concept isn't entirely new. Software engineers have
+long used low-brightness themes to combat fatigue and restlessless after
+staring at a screen all day.
 
 ![Dark mode](ddg-dark-vs-light.png)
 
