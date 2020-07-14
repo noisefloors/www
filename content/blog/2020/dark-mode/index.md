@@ -72,22 +72,21 @@ configured at the operating system level.
 
 It's time to dive into code. During this exercise, we will do the following:
 
-1. Detect whether a visitor has set their preferred color-scheme
+* **Detect if a user has set their preferred color scheme.** All major
+  operating systems (including Linux) allow choosing light or dark interface
+  variants, which is then [exposed in CSS][css-color-scheme] as the
+  `prefers-color-scheme` media feature.
 
-As of this post, all major operating systems (including Linux) allow choosing
-light or dark interface variants, which is then [exposed in CSS as the
-`prefers-color-scheme` media feature][css-color-scheme].
+* **Render a default theme based on the user's global preference.** It's
+  totally okay to default to light colors, but if a user has manually set their
+  preferences, we should use them.
 
-2. Render a default theme based on the user's global preference
 
-Whether the user has set preferences for light or dark, we should present
-options for both. Many website
-
-3. Allow visitors to override operating system configuration
-
-Since accesibility is a very personal concern, we shouldn't require changing
-operating system preferences. Instead, we should let users manually override
-theme defaults, locally storing their choice to be loaded on the next visit.
+* **Allow visitors to override operating system configuration.** Since
+  accessibility is a very personal concern, we shouldn't require changing
+  operating system preferences to make our site readable. Instead, we should
+  let visitors manually override theme and operating system configuration,
+  locally storing their choice to be loaded on the next visit.
 
 [designshack]: https://designshack.net/articles/trends/designing-for-dark-mode/
 [dark-mode-requirements]: https://css-tricks.com/lets-say-you-were-going-to-write-a-blog-post-about-dark-mode/
