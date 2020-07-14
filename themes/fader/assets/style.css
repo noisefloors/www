@@ -372,7 +372,7 @@ body.single main article.post .post-content img {
   margin-left: 20px;
 }
 
-body.single main article.post header figure {
+body.single main article.post header figure, body.single article.post figure {
   width: 100%;
   margin: 20px 0 0 0;
 }

@@ -5,7 +5,7 @@ date = "2020-07-06T00:00:00Z"
 draft = false
 illustrationDescription = "From the top, a dimly-lit escalator bathed in a red hue from reflected neon lights. Image courtesy of Scott Stefan on Unsplash."
 layout = "post"
-title = "Dark Mode: The Complete Guide"
+title = "Dark Mode on the Web: A Complete Guide"
 summary = "It's easy on the eyes and sometimes, even on your battery. So how do you turn off the lights?"
 +++
 
@@ -42,39 +42,52 @@ As you might expect, this concept isn't entirely new. Software engineers have
 long used low-brightness themes to combat fatigue and restlessness after
 staring at a screen all day. However, as dark mode rises in popularity, the
 overarching health benefits of adopting dark mode seem to be exaggerated. Anna
-Cox, [a professor of human-computer interaction at UCL][wired], cautions taking
-assertions at face value: "I'm not aware of any robust evidence that white text
-on black background reduces eye strain."
+Cox, [a professor of human-computer interaction at UCL, cautions against taking
+popular assertions at face value][wired], telling *Wired* magazine "I'm not
+aware of any robust evidence that white text on black background reduces eye
+strain."
 
 Examining dark mode through the lens of accessibility demonstrates that it is
 beneficial to some while frustrating others. For example, while dark colored
-backgrounds may reduce glare, further research reveals they [may also cause
-highly interactive or animated interfaces to appear blurred][ux-a11y], due to
-current [display manufacturing techniques][wiki-motion-blur].
-
+backgrounds may reduce glare for certain users, further research reveals they
+[may also cause highly interactive or animated interfaces to appear
+blurred][ux-a11y], due to current [display manufacturing
+techniques][wiki-motion-blur].
 
 ## Should I Implement Dark Mode?
 
+It depends on many factors. If your site or application is either mobile-first
+or attracts significant mobile traffic, I'd encourage you to consider it. One
+study, ran by Google and focused on mobile devices using OLED screen
+technology, found that dark mode consumes up to [60% less power when compared
+to bright white themes][dark-mode-study]. This outcome is largely expected,
+since OLED panels allow unused portions of the display (pure black) to be
+completely powered off.
 
-After reading all of this, you may find yourself asking if dark mode is worthwhile. 
-
-I admit, it's a question I wrestle with often, and
-
-However, the health benefits of dark mode seem to be exaggerated. For
-certain disabilities, dark mode improves the user's experience while it
-degrades functionality for others. This is why detecting and adhering to system
-preferences is critical. However, one area where dark mode triumphs is on
-devices featuring OLED screens, which allow portions of the display to be
-entirely powered-of when unused. Studies of the original Google Pixel
-demonstrated a 63% reduce in power drawn from the battery when dark mode is
-enabled.
-
-If you're looking for a guide on choosing a color palette for your dark theme,
-[UX Collective has a handy article][ux-collective] on the subject.
-
-## Demo
+Similarly, while dark mode isn't an aid to every visitor, some will find it
+useful. Most critical is properly detecting and adhering to user preferences
+configured at the operating system level.
 
 ## Implementation
+
+It's time to dive into code. During this exercise, we will:
+
+1. Detect whether a visitor has set their preferred color-scheme
+
+As of this post, all major operating systems (including Linux) allow choosing
+light or dark interface variants, which is then [exposed in CSS as the
+`prefers-color-scheme` media feature][css-color-scheme].
+
+2. Render a default theme based on the user's global preference.
+
+Whether the user has set preferences for light or dark, we should present
+options for both.
+
+3. Allow visitors to override operating system configuration
+
+Since accesibility is a very personal concern, we shouldn't require changing
+operating system preferences. Instead, we should let users manually override
+theme defaults, locally storing their choice to be loaded on the next visit.
 
 [designshack]: https://designshack.net/articles/trends/designing-for-dark-mode/
 [dark-mode-requirements]: https://css-tricks.com/lets-say-you-were-going-to-write-a-blog-post-about-dark-mode/
@@ -84,3 +97,5 @@ If you're looking for a guide on choosing a color palette for your dark theme,
 [ux-colors]: https://uxdesign.cc/dark-mode-ui-design-the-definitive-guide-part-1-color-53dcfaea5129
 [ux-a11y]: https://uxdesign.cc/accessibility-and-dark-ui-themes-f01001339b65
 [wiki-motion-blur]: https://en.wikipedia.org/wiki/Display_motion_blur
+[dark-mode-study]: https://www.theverge.com/2018/11/8/18076502/google-dark-mode-android-battery-life
+[css-color-scheme]: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
