@@ -56,7 +56,7 @@ techniques][wiki-motion-blur].
 
 ## Should I Implement Dark Mode?
 
-It depends on many factors. If your site or application is either mobile-first
+It depends on several factors. If your site or application is either mobile-first
 or attracts significant mobile traffic, I'd encourage you to consider it. One
 study, ran by Google and focused on mobile devices using OLED screen
 technology, found that dark mode consumes up to [60% less power when compared
@@ -70,7 +70,7 @@ configured at the operating system level.
 
 ## Implementation
 
-It's time to dive into code. During this exercise, we will:
+It's time to dive into code. During this exercise, we will do the following:
 
 1. Detect whether a visitor has set their preferred color-scheme
 
@@ -78,10 +78,10 @@ As of this post, all major operating systems (including Linux) allow choosing
 light or dark interface variants, which is then [exposed in CSS as the
 `prefers-color-scheme` media feature][css-color-scheme].
 
-2. Render a default theme based on the user's global preference.
+2. Render a default theme based on the user's global preference
 
 Whether the user has set preferences for light or dark, we should present
-options for both.
+options for both. Many website
 
 3. Allow visitors to override operating system configuration
 
